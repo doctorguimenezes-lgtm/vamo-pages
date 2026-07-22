@@ -1,3 +1,3 @@
 # Creators Vamo!
 
-Versão atualizada com logo oficial, nova copy e ajustes nos dois formatos de parceria.
+Versão ajustada: CTAs removidos, ordem das seções alterada, imagem acima do título no mobile e rodapé centralizado.
