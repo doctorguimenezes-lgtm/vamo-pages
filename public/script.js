@@ -2,7 +2,7 @@
   Cole abaixo o endereço público do seu formulário Tally.
   Exemplo: https://tally.so/r/abc123
 */
-const TALLY_FORM_URL = "";
+const TALLY_FORM_URL = "https://tally.so/r/5BgVN6";
 
 const frame = document.getElementById("tally-frame");
 const placeholder = document.getElementById("form-placeholder");
