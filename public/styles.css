@@ -292,3 +292,38 @@ h1{
     width:100%;
   }
 }
+
+
+/* Cabeçalho centralizado */
+.header{
+  justify-content:center;
+}
+
+/* Aviso da fase de inscrições */
+.selection-notice{
+  margin:0 clamp(20px,6vw,84px);
+  padding:30px 34px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:#fff9f5;
+}
+.selection-notice p{
+  max-width:980px;
+  margin:12px 0 0;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.65;
+}
+.selection-notice strong{
+  color:var(--ink);
+}
+
+@media(max-width:640px){
+  .selection-notice{
+    margin:0 18px;
+    padding:24px;
+  }
+  .selection-notice p{
+    font-size:16px;
+  }
+}

@@ -1,3 +1,3 @@
 # Creators Vamo!
 
-Versão ajustada: CTAs removidos, ordem das seções alterada, imagem acima do título no mobile e rodapé centralizado.
+Versão com logo centralizado e aviso da fase de inscrições até 30 de agosto de 2026.
