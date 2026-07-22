@@ -1,1 +1,3 @@
-# Creators Vamo!\n\nPágina enxuta com dois formatos de parceria e formulário Tally incorporado.\n
+# Creators Vamo!
+
+Versão atualizada com logo oficial, nova copy e ajustes nos dois formatos de parceria.

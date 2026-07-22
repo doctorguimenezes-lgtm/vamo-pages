@@ -23,12 +23,15 @@ a{color:inherit}
   justify-content:space-between;
   padding:26px clamp(20px,6vw,84px)
 }
-.logo{
-  color:var(--orange);
-  font-size:34px;
-  font-weight:900;
-  letter-spacing:-.07em;
+.logo-link{
+  display:inline-flex;
+  align-items:center;
   text-decoration:none
+}
+.brand-logo{
+  display:block;
+  width:142px;
+  height:auto
 }
 .header-link{
   font-size:14px;
@@ -239,6 +242,7 @@ h1{
   color:var(--muted);
   text-decoration:none
 }
+.footer-logo{width:118px}
 @media(max-width:900px){
   .hero{grid-template-columns:1fr}
   .hero-visual{min-height:430px}
@@ -246,7 +250,7 @@ h1{
 }
 @media(max-width:640px){
   .header{padding:21px 18px}
-  .logo{font-size:29px}
+  .brand-logo{width:116px}
   .header-link{font-size:12px}
   .hero{padding:104px 18px 44px;min-height:auto}
   h1{font-size:54px}
