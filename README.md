@@ -1,1 +1,1 @@
-# Creators Vamo!\n\nLanding enxuta com formulário Tally incorporado.\n
+# Creators Vamo!\n\nPágina enxuta com dois formatos de parceria e formulário Tally incorporado.\n
