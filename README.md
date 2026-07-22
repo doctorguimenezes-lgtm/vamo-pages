@@ -1,3 +1,3 @@
 # Creators Vamo!
 
-Versão com nova foto de capa e redesign em blocos arredondados. O formulário Tally permanece incorporado.
+Versão atualizada com logo maior, hero sem subtítulo, checklist compacto e alinhamento à esquerda.
