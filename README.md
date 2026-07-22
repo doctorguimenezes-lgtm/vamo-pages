@@ -1,13 +1,19 @@
-# Vamo Pages
+# Time Vamo!
 
-Projeto estático da Vamo hospedado em Cloudflare Workers Static Assets.
+Landing page estática para o programa de creators e parceiros da Vamo!.
 
-## Estrutura
+## Inserir o formulário Tally
 
-- `public/index.html`: página principal
-- `public/styles.css`: estilos
-- `wrangler.jsonc`: configuração do Cloudflare Worker
+Abra `public/script.js` e altere:
 
-## Deploy
+```js
+const TALLY_FORM_URL = "";
+```
 
-O deploy é feito automaticamente pela integração entre GitHub e Cloudflare.
+para:
+
+```js
+const TALLY_FORM_URL = "https://tally.so/r/SEU_ID";
+```
+
+Depois faça commit no GitHub. A Cloudflare publicará a alteração automaticamente.
