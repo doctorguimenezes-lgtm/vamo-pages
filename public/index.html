@@ -7,8 +7,26 @@
   <meta name="description" content="Programa de creators da Vamo!">
   <meta name="theme-color" content="#ff5a1f">
   <link rel="stylesheet" href="/styles.css">
+  <!-- Meta Pixel: Vamo – Creators (ID 1558745279374123) -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1558745279374123');
+    fbq('track', 'PageView');
+  </script>
 </head>
 <body>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1558745279374123&amp;ev=PageView&amp;noscript=1"
+      alt="">
+  </noscript>
   <header class="header">
     <a class="logo-link" href="#top" aria-label="Vamo!">
       <img class="brand-logo" src="/logo-vamo.png" alt="Vamo!">
@@ -107,6 +125,37 @@
     <a class="footer-site" href="https://www.vamonaweb.com.br">www.vamonaweb.com.br</a>
   </footer>
 
+
+  <script>
+    // Registra um Lead somente após o Tally confirmar o envio deste formulário.
+    window.addEventListener('message', function (event) {
+      if (event.origin !== 'https://tally.so' || typeof event.data !== 'string') return;
+      if (!event.data.includes('Tally.FormSubmitted')) return;
+
+      try {
+        const message = JSON.parse(event.data);
+        const submission = message && message.payload;
+
+        if (!submission || submission.formId !== '5BgVN6') return;
+
+        const submissionId = submission.id || 'sem-id';
+        const storageKey = 'vamo_creator_lead_' + submissionId;
+
+        if (sessionStorage.getItem(storageKey)) return;
+        sessionStorage.setItem(storageKey, '1');
+
+        if (typeof window.fbq === 'function') {
+          window.fbq('track', 'Lead', {
+            content_name: 'Inscrição Time Vamo',
+            content_category: 'Creators',
+            form_id: submission.formId
+          });
+        }
+      } catch (error) {
+        console.warn('Não foi possível processar o evento de envio do Tally.', error);
+      }
+    });
+  </script>
   <script async src="https://tally.so/widgets/embed.js"></script>
 </body>
 </html>
