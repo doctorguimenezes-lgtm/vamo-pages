@@ -37,7 +37,7 @@ a{color:inherit}
 }
 .hero-card{
   position:relative;
-  min-height:690px;
+  min-height:587px;
   border-radius:34px;
   overflow:hidden;
   background:#aaa
@@ -209,13 +209,22 @@ h1{
 .tally-shell iframe{display:block;border-radius:18px}
 .footer{
   display:flex;
+  flex-direction:column;
   justify-content:center;
   align-items:center;
+  gap:12px;
   padding:36px 20px 44px
 }
 .footer-logo{width:128px}
+.footer-site{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.4;
+  text-decoration:none
+}
+.footer-site:hover{color:var(--ink)}
 @media(max-width:900px){
-  .hero-card{min-height:620px}
+  .hero-card{min-height:527px}
   .profile{grid-template-columns:1fr;gap:36px}
   .format-grid{grid-template-columns:1fr}
 }
@@ -224,7 +233,7 @@ h1{
   .brand-logo{width:153px}
   .page-shell{width:min(100% - 18px,1180px);gap:14px}
   .card,.hero-card{border-radius:24px}
-  .hero-card{min-height:620px}
+  .hero-card{min-height:527px}
   .hero-image{object-position:57% center}
   .hero-overlay{background:linear-gradient(0deg,rgba(22,17,16,.76) 0%,rgba(22,17,16,.12) 66%)}
   .hero-copy{left:24px;right:24px;bottom:30px}
