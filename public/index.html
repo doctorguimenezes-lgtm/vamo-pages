@@ -156,6 +156,27 @@
       }
     });
   </script>
+  <script>
+    // Repassa ao Tally os parâmetros recebidos pela landing page
+    // (UTMs, origem_conjunto e outros campos ocultos configurados no formulário).
+    (function () {
+      const iframe = document.querySelector('iframe[data-tally-src*="/embed/5BgVN6"]');
+      if (!iframe || !window.location.search) return;
+
+      try {
+        const tallyUrl = new URL(iframe.dataset.tallySrc);
+        const pageParams = new URLSearchParams(window.location.search);
+
+        pageParams.forEach(function (value, key) {
+          tallyUrl.searchParams.set(key, value);
+        });
+
+        iframe.dataset.tallySrc = tallyUrl.toString();
+      } catch (error) {
+        console.warn('Não foi possível repassar os parâmetros ao Tally.', error);
+      }
+    })();
+  </script>
   <script async src="https://tally.so/widgets/embed.js"></script>
 </body>
 </html>
