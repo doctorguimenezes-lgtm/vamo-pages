@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creators Vamo!</title>
+  <meta name="description" content="Programa de creators da Vamo!">
+  <meta name="theme-color" content="#ff5a1f">
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Meta Pixel: Vamo – Creators (ID 1558745279374123) -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1558745279374123');
+    fbq('track', 'PageView');
+  </script>
+</head>
+<body>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1558745279374123&amp;ev=PageView&amp;noscript=1"
+      alt="">
+  </noscript>
+  <header class="header">
+    <a class="logo-link" href="#top" aria-label="Vamo!">
+      <img class="brand-logo" src="/logo-vamo.png" alt="Vamo!">
+    </a>
+  </header>
+
+  <main id="top" class="page-shell">
+    <section class="hero-card">
+      <img class="hero-image" src="/foto-cover.jpg" alt="Mulher praticando esporte enquanto grava conteúdo com o celular">
+      <div class="hero-overlay"></div>
+      <div class="hero-copy">
+        <span class="eyebrow light">CREATORS VAMO!</span>
+        <h1>Você pratica esporte e gosta de criar conteúdo?</h1>
+      </div>
+    </section>
+
+    <section class="selection-notice card soft-card">
+      <span class="eyebrow">TIME VAMO!</span>
+      <h2>Então venha fazer parte do Time Vamo!</h2>
+      <p>
+        O Time Vamo! é um programa para criadores de conteúdo que praticam esportes e querem crescer junto com a marca,
+        recebendo produtos, criando conteúdos, participando de campanhas e, conforme a modalidade,
+        tendo acesso a um cupom próprio e comissão por vendas.
+      </p>
+    </section>
+
+    <section class="profile card">
+      <div class="section-heading">
+        <span class="eyebrow">QUEM PROCURAMOS</span>
+        <h2>Pessoas que vivem o esporte e já usam ou usariam Vamo! em suas rotinas.</h2>
+      </div>
+      <ul class="profile-list">
+        <li>Praticam com frequência.</li>
+        <li>Gostam de criar conteúdo.</li>
+        <li>Têm uma comunicação autêntica.</li>
+        <li>Querem gerar uma renda extra.</li>
+      </ul>
+    </section>
+
+    <section class="formats card">
+      <div class="section-heading">
+        <span class="eyebrow">COMO VOCÊ PODE PARTICIPAR</span>
+        <h2>Dois formatos de parceria.</h2>
+      </div>
+
+      <div class="format-grid">
+        <article class="format-card">
+          <span class="card-label">CREATOR</span>
+          <h3>Produza conteúdo para a Vamo!</h3>
+          <p>Você recebe produtos em troca de postagens publicadas nas suas redes sociais em colaboração com a Vamo!</p>
+          <ul>
+            <li>Produtos em troca de postagens</li>
+            <li>Briefings e orientações da marca</li>
+            <li>Postagens nas suas redes sociais em colaboração com a Vamo!</li>
+          </ul>
+        </article>
+
+        <article class="format-card featured">
+          <span class="card-label">CREATOR + AFILIADO</span>
+          <h3>Crie conteúdo e indique para sua audiência.</h3>
+          <p>Além de produzir postagens, você também pode divulgar a Vamo! com um cupom próprio e fazer uma renda extra.</p>
+          <ul>
+            <li>Produtos para usar no dia a dia</li>
+            <li>Cupom próprio</li>
+            <li>Comissão pelas vendas</li>
+            <li>Participação em campanhas</li>
+          </ul>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="form-section card" id="inscricao">
+      <div class="form-heading">
+        <span class="eyebrow">INSCRIÇÃO</span>
+        <h2>Quero participar</h2>
+      </div>
+
+      <div class="tally-shell">
+        <iframe
+          data-tally-src="https://tally.so/embed/5BgVN6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="760"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Formulário de inscrição Creators Vamo!">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="brand-logo footer-logo" src="/logo-vamo.png" alt="Vamo!">
+    <a class="footer-site" href="https://www.vamonaweb.com.br">www.vamonaweb.com.br</a>
+  </footer>
+
+
+  <script>
+    // Registra um Lead somente após o Tally confirmar o envio deste formulário.
+    window.addEventListener('message', function (event) {
+      if (event.origin !== 'https://tally.so' || typeof event.data !== 'string') return;
+      if (!event.data.includes('Tally.FormSubmitted')) return;
+
+      try {
+        const message = JSON.parse(event.data);
+        const submission = message && message.payload;
+
+        if (!submission || submission.formId !== '5BgVN6') return;
+
+        const submissionId = submission.id || 'sem-id';
+        const storageKey = 'vamo_creator_lead_' + submissionId;
+
+        if (sessionStorage.getItem(storageKey)) return;
+        sessionStorage.setItem(storageKey, '1');
+
+        if (typeof window.fbq === 'function') {
+          window.fbq('track', 'Lead', {
+            content_name: 'Inscrição Time Vamo',
+            content_category: 'Creators',
+            form_id: submission.formId
+          });
+        }
+      } catch (error) {
+        console.warn('Não foi possível processar o evento de envio do Tally.', error);
+      }
+    });
+  </script>
+  <script>
+    // Repassa ao Tally os parâmetros recebidos pela landing page
+    // (UTMs, origem_conjunto e outros campos ocultos configurados no formulário).
+    (function () {
+      const iframe = document.querySelector('iframe[data-tally-src*="/embed/5BgVN6"]');
+      if (!iframe || !window.location.search) return;
+
+      try {
+        const tallyUrl = new URL(iframe.dataset.tallySrc);
+        const pageParams = new URLSearchParams(window.location.search);
+
+        pageParams.forEach(function (value, key) {
+          tallyUrl.searchParams.set(key, value);
+        });
+
+        iframe.dataset.tallySrc = tallyUrl.toString();
+      } catch (error) {
+        console.warn('Não foi possível repassar os parâmetros ao Tally.', error);
+      }
+    })();
+  </script>
+  <script async src="https://tally.so/widgets/embed.js"></script>
+</body>
+</html>
