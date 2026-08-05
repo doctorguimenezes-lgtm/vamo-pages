@@ -230,6 +230,30 @@
       line-height: 1.6;
     }
 
+    .summary-block.differentials {
+      grid-column: 1 / -1;
+      background: var(--orange-soft);
+      border-color: #f0c4ad;
+    }
+
+    .differential-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .differential-item {
+      padding: 14px 15px;
+      border: 1px solid rgba(255, 90, 25, .22);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .62);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 750;
+      line-height: 1.4;
+    }
+
     .ingredients {
       display: flex;
       flex-wrap: wrap;
@@ -321,6 +345,28 @@
       margin: 0;
       color: var(--text);
       font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .visual-tip {
+      margin: 24px 0 0 70px;
+      padding: 20px 22px;
+      border: 1px solid rgba(255, 90, 25, .24);
+      border-radius: 14px;
+      background: var(--orange-soft);
+    }
+
+    .visual-tip strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+      letter-spacing: -.01em;
+    }
+
+    .visual-tip p {
+      margin: 0;
+      color: var(--text);
+      font-size: 14px;
       line-height: 1.55;
     }
 
@@ -594,6 +640,7 @@
       .product-summary,
       .rules,
       .idea-table,
+      .visual-tip,
       .reference-grid,
       .affiliate-panel,
       .reference-note,
@@ -602,6 +649,8 @@
       .editorial-item { grid-template-columns: 30px 1fr; gap: 12px; }
       .editorial-item p { grid-column: 2; }
       .product-summary, .rules, .reference-grid, .checklist { grid-template-columns: 1fr; }
+      .summary-block.differentials { grid-column: auto; }
+      .differential-list { grid-template-columns: 1fr 1fr; }
       .affiliate-points, .affiliate-actions { grid-template-columns: 1fr; }
       .reference-embed { min-height: 460px; padding: 10px; }
       .check-item:nth-child(odd) { border-right: 0; }
@@ -619,12 +668,14 @@
       .product-summary,
       .rules,
       .idea-table,
+      .visual-tip,
       .reference-grid,
       .affiliate-panel,
       .reference-note,
       .checklist,
       .support { margin-left: 0; }
       .principle { padding: 24px; }
+      .differential-list { grid-template-columns: 1fr; }
       .cover-copy { font-size: 17px; }
     }
   </style>
@@ -715,6 +766,16 @@
             <h3>Quando mostrar</h3>
             <p>Antes do treino, durante atividades mais longas ou intensas, em provas, torneios e dias com mais de uma atividade.</p>
           </div>
+          <div class="summary-block differentials">
+            <h3>Diferenciais importantes</h3>
+            <p>Além da combinação de ingredientes para esportes intensos, Vamo! tem características que ajudam a tornar o consumo mais agradável no dia a dia e durante o treino.</p>
+            <div class="differential-list">
+              <div class="differential-item">Feito com água de coco em pó</div>
+              <div class="differential-item">Fórmula limpa</div>
+              <div class="differential-item">Sem corantes e conservantes artificiais</div>
+              <div class="differential-item">Muito leve e saboroso</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -772,6 +833,10 @@
             <div class="idea-moment">Depois</div>
             <p>Um resumo sincero do treino, bastidores, aprendizados ou como foi usar o produto.</p>
           </div>
+        </div>
+        <div class="visual-tip">
+          <strong>Dica para filmar o sachê</strong>
+          <p>Não filme a embalagem sob a luz direta do sol. Prefira sempre a sombra ou uma luz indireta: assim, as cores, o brilho e as informações do sachê aparecem muito melhor.</p>
         </div>
       </div>
     </section>
@@ -901,8 +966,7 @@
             <h3>Ficou com alguma dúvida?</h3>
             <p>Fale com a equipe Vamo! antes de publicar.</p>
           </div>
-          <!-- Substitua pelo número oficial, com DDI e DDD. -->
-          <a href="https://wa.me/5544999999999" target="_blank" rel="noopener">Falar com a equipe</a>
+          <a href="https://wa.me/5544998740150" target="_blank" rel="noopener">Falar com a equipe</a>
         </div>
       </div>
     </section>
