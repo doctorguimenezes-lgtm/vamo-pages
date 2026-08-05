@@ -34,7 +34,7 @@
     }
 
     a { color: inherit; }
-    .page { width: min(calc(100% - 40px), var(--content)); margin-inline: auto; }
+    .page { width: min(calc(100% - 64px), var(--content)); margin-inline: auto; }
 
     .document-header {
       padding: 34px 0 20px;
@@ -105,16 +105,6 @@
       line-height: 1.6;
     }
 
-    .personal-note {
-      max-width: 760px;
-      margin-top: 34px;
-      padding: 18px 20px;
-      border-left: 3px solid var(--orange);
-      background: rgba(255,255,255,.55);
-      color: #5e5953;
-      font-size: 14px;
-      line-height: 1.55;
-    }
 
     .guide-section {
       padding: 58px 0;
@@ -155,7 +145,7 @@
     .principle {
       margin-left: 70px;
       padding: 28px 30px;
-      border-radius: 4px;
+      border-radius: 16px;
       background: var(--ink);
       color: var(--white);
     }
@@ -217,6 +207,7 @@
     .summary-block {
       padding: 27px;
       border: 1px solid var(--line);
+      border-radius: 16px;
       background: rgba(255,255,255,.45);
     }
 
@@ -335,7 +326,9 @@
     }
 
     .reference-card {
+      overflow: hidden;
       border: 1px solid var(--line);
+      border-radius: 16px;
       background: rgba(255,255,255,.45);
     }
 
@@ -436,7 +429,7 @@
       width: 16px;
       height: 16px;
       border: 1.5px solid var(--orange);
-      border-radius: 3px;
+      border-radius: 5px;
       background: transparent;
     }
 
@@ -465,6 +458,7 @@
       flex: 0 0 auto;
       padding: 11px 15px;
       border: 1px solid var(--ink);
+      border-radius: 10px;
       text-decoration: none;
       font-size: 12px;
       font-weight: 800;
@@ -488,7 +482,7 @@
     }
 
     @media (max-width: 720px) {
-      .page { width: min(calc(100% - 28px), var(--content)); }
+      .page { width: min(calc(100% - 44px), var(--content)); }
       .document-header { padding-top: 24px; }
       .header-line { padding-bottom: 17px; }
       .document-type { font-size: 10px; }
@@ -548,8 +542,7 @@
       <div class="page">
         <div class="cover-label">Guia de conteúdo</div>
         <h1>Como criar conteúdos com a Vamo!</h1>
-        <p class="cover-copy">Este material reúne orientações simples, ideias e referências para integrar a Vamo! à sua rotina esportiva mantendo a sua linguagem.</p>
-        <div class="personal-note">As condições da sua parceria — como quantidade de conteúdos, produtos, cupom ou comissão — são as combinadas diretamente com você.</div>
+        <p class="cover-copy">Este material reúne orientações simples, ideias e referências para integrar Vamo! à sua rotina esportiva mantendo a sua linguagem.</p>
       </div>
     </section>
 
@@ -586,7 +579,7 @@
           <div class="editorial-item">
             <span class="item-index">02</span>
             <h3>Produto em contexto</h3>
-            <p>Mostre quando prepara, onde leva e como inclui a Vamo! na atividade.</p>
+            <p>Mostre quando prepara, onde leva e como inclui Vamo! na atividade.</p>
           </div>
           <div class="editorial-item">
             <span class="item-index">03</span>
@@ -602,7 +595,7 @@
         <div class="section-heading">
           <span class="section-number">03</span>
           <div>
-            <h2>Como apresentar a Vamo!</h2>
+            <h2>Como apresentar Vamo!</h2>
             <p class="section-intro">Use informações simples e corretas. Não é necessário explicar toda a fórmula em cada publicação.</p>
           </div>
         </div>
@@ -613,7 +606,7 @@
             <div class="ingredients">
               <span>Carboidratos</span>
               <span>Eletrólitos</span>
-              <span>Vitaminas</span>
+              <span>Vitaminas B e C</span>
               <span>Taurina</span>
               <span>Com ou sem cafeína</span>
             </div>
@@ -631,12 +624,12 @@
         <div class="section-heading">
           <span class="section-number">04</span>
           <div>
-            <h2>Pode falar. Melhor evitar.</h2>
+            <h2>Pode falar × Melhor evitar</h2>
           </div>
         </div>
         <div class="rules">
           <div class="rule-column good">
-            <h3>Pode</h3>
+            <h3>Pode falar</h3>
             <ul>
               <li>Mostrar o preparo e o consumo.</li>
               <li>Contar sua experiência de verdade.</li>
@@ -645,11 +638,11 @@
             </ul>
           </div>
           <div class="rule-column bad">
-            <h3>Evite</h3>
+            <h3>Melhor evitar</h3>
             <ul>
               <li>Prometer resultados garantidos.</li>
-              <li>Dizer que o produto previne câimbras.</li>
-              <li>Apresentar a Vamo! como medicamento.</li>
+              <li>Dizer que o produto elimina o cansaço.</li>
+              <li>Apresentar Vamo! como medicamento.</li>
               <li>Tratar como um energético comum.</li>
             </ul>
           </div>
@@ -673,7 +666,7 @@
           </div>
           <div class="idea-row">
             <div class="idea-moment">Durante</div>
-            <p>A Vamo! na quadra, pista, academia ou bike, integrada naturalmente à atividade.</p>
+            <p>Vamo! na quadra, pista, academia ou bike, integrada naturalmente à atividade.</p>
           </div>
           <div class="idea-row">
             <div class="idea-moment">Depois</div>
