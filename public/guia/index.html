@@ -236,6 +236,93 @@
       border-color: #f0c4ad;
     }
 
+    .positioning-box {
+      grid-column: 1 / -1;
+      padding: 28px 30px;
+      border-radius: 16px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .positioning-box small {
+      display: block;
+      margin-bottom: 9px;
+      color: #ff9a6e;
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .positioning-box strong {
+      display: block;
+      max-width: 720px;
+      font-size: clamp(21px, 3vw, 28px);
+      line-height: 1.18;
+      letter-spacing: -.025em;
+    }
+
+    .positioning-box p {
+      max-width: 720px;
+      margin: 12px 0 0;
+      color: #c9c9c9;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .comparison-block {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 52px 1fr;
+      gap: 18px;
+      align-items: stretch;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.45);
+    }
+
+    .comparison-side {
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.72);
+    }
+
+    .comparison-side.highlight {
+      background: var(--orange-soft);
+    }
+
+    .comparison-side h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: -.02em;
+    }
+
+    .comparison-side p {
+      margin: 0;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.58;
+    }
+
+    .comparison-vs {
+      display: grid;
+      place-items: center;
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .comparison-note {
+      grid-column: 1 / -1;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
     .differential-list {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -346,6 +433,43 @@
       color: var(--text);
       font-size: 15px;
       line-height: 1.55;
+    }
+
+    .talk-hooks {
+      margin: 28px 0 0 70px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.58);
+    }
+
+    .talk-hooks h3 {
+      margin: 0 0 6px;
+      font-size: 19px;
+      letter-spacing: -.02em;
+    }
+
+    .talk-hooks > p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .hook-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .hook-item {
+      padding: 14px 15px;
+      border-radius: 11px;
+      background: var(--orange-soft);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.45;
     }
 
     .visual-tip {
@@ -648,6 +772,7 @@
       .product-summary,
       .rules,
       .idea-table,
+      .talk-hooks,
       .visual-tip,
       .reference-grid,
       .affiliate-panel,
@@ -659,6 +784,9 @@
       .product-summary, .rules, .reference-grid, .checklist { grid-template-columns: 1fr; }
       .summary-block.differentials { grid-column: auto; }
       .differential-list { grid-template-columns: 1fr 1fr; }
+      .comparison-block { grid-template-columns: 1fr; }
+      .comparison-vs { min-height: 26px; }
+      .hook-list { grid-template-columns: 1fr; }
       .affiliate-points, .affiliate-actions { grid-template-columns: 1fr; }
       .reference-embed { min-height: 0; padding: 8px; }
       .instagram-frame { height: 680px; }
@@ -679,6 +807,7 @@
       .product-summary,
       .rules,
       .idea-table,
+      .talk-hooks,
       .visual-tip,
       .reference-grid,
       .affiliate-panel,
@@ -686,6 +815,8 @@
       .checklist,
       .support { margin-left: 0; }
       .principle { padding: 24px; }
+      .positioning-box, .comparison-block, .talk-hooks { padding: 22px; }
+      .comparison-side { padding: 17px; }
       .differential-list { grid-template-columns: 1fr; }
       .cover-copy { font-size: 17px; }
     }
@@ -704,7 +835,7 @@
       <div class="page">
         <div class="cover-label">Guia de conteúdo</div>
         <h1>Como criar conteúdos com a Vamo!</h1>
-        <p class="cover-copy">Este material reúne orientações simples, ideias e referências para integrar Vamo! à sua rotina esportiva mantendo a sua linguagem.</p>
+        <p class="cover-copy">O ponto de partida é simples: apresente Vamo! como <strong>o pré-treino ideal para esportes intensos</strong>. Antes da corrida, do pedal, do CrossFit, do tênis ou de qualquer atividade que exija energia e hidratação.</p>
       </div>
     </section>
 
@@ -713,13 +844,13 @@
         <div class="section-heading">
           <span class="section-number">01</span>
           <div>
-            <h2>O princípio mais importante</h2>
-            <p class="section-intro">O conteúdo deve fazer sentido dentro do seu perfil e da sua rotina.</p>
+            <h2>O ponto de partida é o pré-treino</h2>
+            <p class="section-intro">É essa associação que queremos construir na cabeça de quem acompanha o seu conteúdo.</p>
           </div>
         </div>
         <div class="principle">
-          <strong>A Vamo! entra na história. Não interrompe a história.</strong>
-          <p>Não é necessário transformar a publicação em uma propaganda. Mostre o produto no contexto real do seu treino, prova, competição ou preparação.</p>
+          <strong>Seu treino começa com Vamo!</strong>
+          <p>Priorize mostrar o preparo e o consumo antes da atividade. A ideia é simples: com Vamo!, você já começa o treino abastecido, com energia e hidratação. A inserção deve continuar natural, dentro da sua rotina.</p>
         </div>
       </div>
     </section>
@@ -741,7 +872,7 @@
           <div class="editorial-item">
             <span class="item-index">02</span>
             <h3>Produto em contexto</h3>
-            <p>Mostre quando prepara, onde leva e como inclui Vamo! na atividade.</p>
+            <p>Mostre o preparo antes do treino, onde leva e como Vamo! entra na sua rotina esportiva.</p>
           </div>
           <div class="editorial-item">
             <span class="item-index">03</span>
@@ -758,28 +889,29 @@
           <span class="section-number">03</span>
           <div>
             <h2>Como apresentar Vamo!</h2>
-            <p class="section-intro">Use informações simples e corretas. Não é necessário explicar toda a fórmula em cada publicação.</p>
+            <p class="section-intro">Não é preciso dar uma aula sobre a fórmula. O mais importante é transmitir a ideia central de forma simples.</p>
           </div>
         </div>
         <div class="product-summary">
-          <div class="summary-block">
-            <h3>O que é</h3>
-            <p>Um pré e intra-treino para esportes intensos. Cada sachê é preparado com 500 ml de água.</p>
-            <div class="ingredients">
-              <span>Carboidratos</span>
-              <span>Eletrólitos</span>
-              <span>Vitaminas B e C</span>
-              <span>Taurina</span>
-              <span>Com ou sem cafeína</span>
-            </div>
+          <div class="positioning-box">
+            <small>Mensagem principal</small>
+            <strong>Energia e hidratação antes do treino.</strong>
+            <p>Vamo! é o pré-treino ideal para esportes intensos porque sua composição é diferente dos pré-treinos tradicionais de academia. Além do estímulo, entrega energia real e hidratação para você já começar abastecido.</p>
           </div>
+
           <div class="summary-block">
-            <h3>Quando mostrar</h3>
-            <p>Antes do treino, durante atividades mais longas ou intensas, em provas, torneios e dias com mais de uma atividade.</p>
+            <h3>Forma de uso</h3>
+            <p>Prepare 1 sachê em 500 ml de água. Vamo! é um pré-treino: um bom jeito de usar é começar a tomar um pouco antes da atividade e, dependendo da duração e da intensidade, continuar tomando já com o treino em andamento.</p>
           </div>
+
+          <div class="summary-block">
+            <h3>A diferença em uma frase</h3>
+            <p>O pré-treino de academia costuma focar principalmente no estímulo. Vamo! foi pensado para quem precisa começar o esporte com energia e hidratação.</p>
+          </div>
+
           <div class="summary-block differentials">
             <h3>Diferenciais importantes</h3>
-            <p>Além da combinação de ingredientes para esportes intensos, Vamo! tem características que ajudam a tornar o consumo mais agradável no dia a dia e durante o treino.</p>
+            <p>Você também pode destacar essas características de forma natural, sem precisar explicar cada ingrediente.</p>
             <div class="differential-list">
               <div class="differential-item">Feito com água de coco em pó</div>
               <div class="differential-item">Fórmula limpa</div>
@@ -803,19 +935,21 @@
           <div class="rule-column good">
             <h3>Pode falar</h3>
             <ul>
-              <li>Mostrar o preparo e o consumo.</li>
-              <li>Contar sua experiência de verdade.</li>
-              <li>Falar sobre sua preparação para treinos e provas.</li>
-              <li>Usar o produto antes ou durante a atividade.</li>
+              <li>Apresentar Vamo! como o pré-treino ideal para esportes intensos.</li>
+              <li>Dizer que entrega energia real e hidratação antes do treino.</li>
+              <li>Explicar que você já começa a atividade mais abastecido.</li>
+              <li>Comparar, de forma simples, com pré-treinos focados apenas em estímulo.</li>
+              <li>Mostrar o preparo e o consumo dentro da sua rotina.</li>
             </ul>
           </div>
           <div class="rule-column bad">
             <h3>Melhor evitar</h3>
             <ul>
-              <li>Prometer resultados garantidos.</li>
-              <li>Dizer que o produto elimina o cansaço.</li>
+              <li>Dar explicações técnicas ou entrar em discussões sobre nutrição.</li>
+              <li>Detalhar a função de cada ingrediente.</li>
+              <li>Prometer resultados garantidos ou dizer que elimina o cansaço.</li>
               <li>Apresentar Vamo! como medicamento.</li>
-              <li>Tratar como um energético comum.</li>
+              <li>Tratar como energético comum ou apenas como isotônico.</li>
             </ul>
           </div>
         </div>
@@ -827,24 +961,46 @@
         <div class="section-heading">
           <span class="section-number">05</span>
           <div>
-            <h2>Ideias simples de conteúdo</h2>
-            <p class="section-intro">Use como ponto de partida e adapte à sua modalidade e ao seu perfil.</p>
+            <h2>Ideias do que mostrar e falar</h2>
+            <p class="section-intro">Não precisa explicar demais. Mostre o uso e repita a mensagem principal de maneiras diferentes.</p>
           </div>
         </div>
         <div class="idea-table">
           <div class="idea-row">
-            <div class="idea-moment">Antes</div>
-            <p>Preparando a garrafa, organizando a mochila ou contando qual será o treino do dia.</p>
+            <div class="idea-moment">Antes do treino</div>
+            <p>Prepare a garrafa antes de sair, comece a tomar um pouco antes da atividade e mostre que seu treino começa com Vamo!</p>
           </div>
           <div class="idea-row">
-            <div class="idea-moment">Durante</div>
-            <p>Vamo! na quadra, pista, academia ou bike, integrada naturalmente à atividade.</p>
+            <div class="idea-moment">Comparação simples</div>
+            <p>Conte que, para corrida, bike, CrossFit ou tênis, você prefere um pré-treino que entregue energia e hidratação, e não apenas estímulo.</p>
           </div>
           <div class="idea-row">
-            <div class="idea-moment">Depois</div>
-            <p>Um resumo sincero do treino, bastidores, aprendizados ou como foi usar o produto.</p>
+            <div class="idea-moment">Começar abastecido</div>
+            <p>Mostre que você toma Vamo! para já iniciar a atividade com energia e hidratação.</p>
+          </div>
+          <div class="idea-row">
+            <div class="idea-moment">Rotina real</div>
+            <p>Inclua Vamo! na preparação da mochila, da bike, da prova, do treino ou da competição.</p>
+          </div>
+          <div class="idea-row">
+            <div class="idea-moment">Leve e saboroso</div>
+            <p>Fale sobre a experiência de beber: leve, saboroso e fácil de tomar antes do esporte.</p>
           </div>
         </div>
+
+        <div class="talk-hooks">
+          <h3>Frases que podem inspirar</h3>
+          <p>Adapte ao seu jeito de falar. Não precisa repetir literalmente.</p>
+          <div class="hook-list">
+            <div class="hook-item">“Meu treino começa com Vamo!”</div>
+            <div class="hook-item">“Não é só estímulo. É energia e hidratação antes do treino.”</div>
+            <div class="hook-item">“Eu gosto de já começar o treino abastecido.”</div>
+            <div class="hook-item">“Para esporte intenso, meu pré-treino precisa entregar mais.”</div>
+            <div class="hook-item">“Um sachê, 500 ml de água e Vamo!”</div>
+            <div class="hook-item">“O pré-treino ideal para o esporte que eu pratico.”</div>
+          </div>
+        </div>
+
         <div class="visual-tip">
           <strong>Dica para filmar o sachê</strong>
           <p>Não filme a embalagem sob a luz direta do sol. Prefira sempre a sombra ou uma luz indireta: assim, as cores, o brilho e as informações do sachê aparecem muito melhor.</p>
