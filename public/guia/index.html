@@ -318,6 +318,84 @@
       line-height: 1.55;
     }
 
+    .affiliate-panel {
+      margin-left: 70px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.58);
+    }
+
+    .affiliate-lead {
+      max-width: 710px;
+      margin: 0;
+      color: var(--text);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .affiliate-emphasis {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+      background: var(--orange-soft);
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 750;
+      line-height: 1.55;
+    }
+
+    .affiliate-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .affiliate-point {
+      padding-top: 17px;
+      border-top: 2px solid var(--orange);
+    }
+
+    .affiliate-point h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      letter-spacing: -.02em;
+    }
+
+    .affiliate-point p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .affiliate-actions {
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
+
+    .affiliate-actions li {
+      position: relative;
+      padding-left: 19px;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .affiliate-actions li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: var(--orange);
+      font-weight: 900;
+    }
+
     .reference-grid {
       margin-left: 70px;
       display: grid;
@@ -339,7 +417,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      min-height: 520px;
+      min-height: 500px;
     }
 
     .reference-embed .instagram-media {
@@ -347,6 +425,19 @@
       width: 100% !important;
       max-width: 420px !important;
       margin: 0 auto !important;
+    }
+
+    .embed-fallback {
+      display: inline-flex;
+      min-height: 440px;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      text-align: center;
     }
 
     .reference-placeholder {
@@ -498,13 +589,15 @@
       .rules,
       .idea-table,
       .reference-grid,
+      .affiliate-panel,
       .reference-note,
       .checklist,
       .support { margin-left: 48px; }
       .editorial-item { grid-template-columns: 30px 1fr; gap: 12px; }
       .editorial-item p { grid-column: 2; }
       .product-summary, .rules, .reference-grid, .checklist { grid-template-columns: 1fr; }
-      .reference-embed { min-height: 470px; padding: 10px; }
+      .affiliate-points, .affiliate-actions { grid-template-columns: 1fr; }
+      .reference-embed { min-height: 460px; padding: 10px; }
       .check-item:nth-child(odd) { border-right: 0; }
       .idea-row { grid-template-columns: 1fr; gap: 7px; }
       .support { align-items: flex-start; flex-direction: column; }
@@ -521,6 +614,7 @@
       .rules,
       .idea-table,
       .reference-grid,
+      .affiliate-panel,
       .reference-note,
       .checklist,
       .support { margin-left: 0; }
@@ -681,47 +775,37 @@
         <div class="section-heading">
           <span class="section-number">06</span>
           <div>
-            <h2>Referências</h2>
-            <p class="section-intro">Observe a construção, a linguagem e a forma de inserir o produto. Não copie o conteúdo.</p>
+            <h2>Para afiliados com cupom</h2>
+            <p class="section-intro">Ter um cupom não significa que as vendas acontecerão automaticamente. Vender pela internet exige presença, confiança e repetição.</p>
           </div>
         </div>
-        <div class="reference-grid">
-          <article class="reference-card">
-            <div class="reference-embed">
-              <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Da3jpsqNkvN/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:0; box-shadow:none; margin:0; padding:0; width:100%;"></blockquote>
+        <div class="affiliate-panel">
+          <p class="affiliate-lead">Quanto mais você mostrar Vamo! em Reels, Stories, posts e dentro da sua rotina, mais oportunidades sua audiência terá de conhecer o produto, entender como você usa e lembrar do seu cupom quando decidir comprar.</p>
+
+          <div class="affiliate-emphasis">Uma única publicação raramente é suficiente. A venda pode acontecer depois que a pessoa viu o produto várias vezes, tirou dúvidas e passou a confiar na sua indicação.</div>
+
+          <div class="affiliate-points">
+            <div class="affiliate-point">
+              <h3>Frequência</h3>
+              <p>Quanto mais conteúdos relevantes você publicar, maiores serão as chances de alcançar pessoas em momentos diferentes.</p>
             </div>
-            <div class="reference-copy">
-              <small>Referência real</small>
-              <h3>Exemplo de Reel incorporado</h3>
-              <p>Usamos este primeiro embed só para você testar como o conteúdo aparece no celular dentro da página.</p>
+            <div class="affiliate-point">
+              <h3>Consistência</h3>
+              <p>Use e mencione o produto ao longo do tempo. Uma recomendação recorrente tende a ser mais convincente do que uma aparição isolada.</p>
             </div>
-          </article>
-          <article class="reference-card">
-            <div class="reference-placeholder"><span>Inserir Reel</span></div>
-            <div class="reference-copy">
-              <small>O que observar</small>
-              <h3>Problema ou situação real</h3>
-              <p>O conteúdo começa por algo relevante para o público e apresenta o produto no decorrer da narrativa.</p>
+            <div class="affiliate-point">
+              <h3>Paciência</h3>
+              <p>Os primeiros conteúdos podem não gerar vendas. Muitas pessoas precisam conhecer, observar e considerar antes de comprar.</p>
             </div>
-          </article>
-          <article class="reference-card">
-            <div class="reference-placeholder"><span>Inserir post</span></div>
-            <div class="reference-copy">
-              <small>O que observar</small>
-              <h3>Imagem simples e forte</h3>
-              <p>O produto aparece claramente, sem parecer uma peça publicitária tradicional.</p>
-            </div>
-          </article>
-          <article class="reference-card">
-            <div class="reference-placeholder"><span>Inserir Reel</span></div>
-            <div class="reference-copy">
-              <small>O que observar</small>
-              <h3>Linguagem própria</h3>
-              <p>O creator mantém seu jeito de falar e o formato que sua audiência já reconhece.</p>
-            </div>
-          </article>
+          </div>
+
+          <ul class="affiliate-actions">
+            <li>Mostre o produto em diferentes momentos da sua rotina.</li>
+            <li>Relembre o cupom nos Stories de forma natural.</li>
+            <li>Explique claramente o desconto e como comprar.</li>
+            <li>Compartilhe o link sempre que falar do produto.</li>
+          </ul>
         </div>
-        <p class="reference-note">O primeiro quadro já está com um Reel incorporado para teste. Os demais podem ser adicionados depois.</p>
       </div>
     </section>
 
@@ -729,6 +813,72 @@
       <div class="page">
         <div class="section-heading">
           <span class="section-number">07</span>
+          <div>
+            <h2>Referências</h2>
+            <p class="section-intro">Observe a construção, a linguagem e a forma de inserir o produto. Não copie o conteúdo.</p>
+          </div>
+        </div>
+        <div class="reference-grid">
+          <article class="reference-card">
+            <div class="reference-embed">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Da3jpsqNkvN/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:0; box-shadow:none; margin:0; padding:0; width:100%;">
+                <a class="embed-fallback" href="https://www.instagram.com/p/Da3jpsqNkvN/" target="_blank" rel="noopener">Ver Reel no Instagram</a>
+              </blockquote>
+            </div>
+            <div class="reference-copy">
+              <small>Reel</small>
+              <h3>Produto dentro da rotina</h3>
+              <p>Observe como o produto aparece integrado a uma situação real, sem transformar todo o vídeo em uma apresentação comercial.</p>
+            </div>
+          </article>
+
+          <article class="reference-card">
+            <div class="reference-embed">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DbnrK_OjvlC/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:0; box-shadow:none; margin:0; padding:0; width:100%;">
+                <a class="embed-fallback" href="https://www.instagram.com/p/DbnrK_OjvlC/" target="_blank" rel="noopener">Ver carrossel no Instagram</a>
+              </blockquote>
+            </div>
+            <div class="reference-copy">
+              <small>Carrossel</small>
+              <h3>Uma ideia construída em sequência</h3>
+              <p>Observe como as imagens trabalham juntas para desenvolver uma mensagem. Cada tela deve acrescentar algo e incentivar a pessoa a continuar deslizando.</p>
+            </div>
+          </article>
+
+          <article class="reference-card">
+            <div class="reference-embed">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DblJiNtocfQ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:0; box-shadow:none; margin:0; padding:0; width:100%;">
+                <a class="embed-fallback" href="https://www.instagram.com/p/DblJiNtocfQ/" target="_blank" rel="noopener">Ver post no Instagram</a>
+              </blockquote>
+            </div>
+            <div class="reference-copy">
+              <small>Post simples</small>
+              <h3>Uma imagem que comunica sozinha</h3>
+              <p>Observe a simplicidade da composição e a presença clara do produto. Nem todo conteúdo precisa de muitas informações ou de uma produção complexa.</p>
+            </div>
+          </article>
+
+          <article class="reference-card">
+            <div class="reference-embed">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DS0j_F2kZ05/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:0; box-shadow:none; margin:0; padding:0; width:100%;">
+                <a class="embed-fallback" href="https://www.instagram.com/p/DS0j_F2kZ05/" target="_blank" rel="noopener">Ver Reel no Instagram</a>
+              </blockquote>
+            </div>
+            <div class="reference-copy">
+              <small>Reel</small>
+              <h3>Formato natural para o perfil</h3>
+              <p>Observe como o conteúdo mantém a linguagem e o ritmo habituais do creator. A inserção da marca funciona melhor quando não parece deslocada do restante do perfil.</p>
+            </div>
+          </article>
+        </div>
+        <p class="reference-note">As referências servem para observar formato, construção e integração do produto. Adapte as ideias ao seu esporte e à sua linguagem.</p>
+      </div>
+    </section>
+
+    <section class="guide-section">
+      <div class="page">
+        <div class="section-heading">
+          <span class="section-number">08</span>
           <div>
             <h2>Antes de publicar</h2>
             <p class="section-intro">Uma conferência rápida evita informações erradas e retrabalho.</p>
