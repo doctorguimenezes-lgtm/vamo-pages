@@ -472,11 +472,19 @@
       min-height: 500px;
     }
 
-    .reference-embed .instagram-media {
-      min-width: 0 !important;
-      width: 100% !important;
-      max-width: 420px !important;
-      margin: 0 auto !important;
+    .instagram-frame {
+      display: block;
+      width: 100%;
+      max-width: 420px;
+      height: 690px;
+      margin: 0 auto;
+      border: 0;
+      background: #fff;
+    }
+
+    .instagram-frame.is-post,
+    .instagram-frame.is-carousel {
+      height: 620px;
     }
 
     .embed-fallback {
@@ -652,7 +660,10 @@
       .summary-block.differentials { grid-column: auto; }
       .differential-list { grid-template-columns: 1fr 1fr; }
       .affiliate-points, .affiliate-actions { grid-template-columns: 1fr; }
-      .reference-embed { min-height: 460px; padding: 10px; }
+      .reference-embed { min-height: 0; padding: 8px; }
+      .instagram-frame { height: 680px; }
+      .instagram-frame.is-post,
+      .instagram-frame.is-carousel { height: 600px; }
       .check-item:nth-child(odd) { border-right: 0; }
       .idea-row { grid-template-columns: 1fr; gap: 7px; }
       .support { align-items: flex-start; flex-direction: column; }
@@ -892,9 +903,14 @@
         <div class="reference-grid">
           <article class="reference-card">
             <div class="reference-embed">
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Da3jpsqNkvN/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:0; box-shadow:none; margin:0; padding:0; width:100%;">
-                <a class="embed-fallback" href="https://www.instagram.com/p/Da3jpsqNkvN/" target="_blank" rel="noopener">Ver Reel no Instagram</a>
-              </blockquote>
+              <iframe
+                class="instagram-frame is-reel"
+                src="https://www.instagram.com/p/Da3jpsqNkvN/embed/"
+                title="Reel de referência no Instagram"
+                loading="lazy"
+                allowtransparency="true"
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="reference-copy">
               <small>Reel</small>
@@ -905,9 +921,14 @@
 
           <article class="reference-card">
             <div class="reference-embed">
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DbnrK_OjvlC/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:0; box-shadow:none; margin:0; padding:0; width:100%;">
-                <a class="embed-fallback" href="https://www.instagram.com/p/DbnrK_OjvlC/" target="_blank" rel="noopener">Ver carrossel no Instagram</a>
-              </blockquote>
+              <iframe
+                class="instagram-frame is-carousel"
+                src="https://www.instagram.com/p/DbnrK_OjvlC/embed/"
+                title="carrossel de referência no Instagram"
+                loading="lazy"
+                allowtransparency="true"
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="reference-copy">
               <small>Carrossel</small>
@@ -918,9 +939,14 @@
 
           <article class="reference-card">
             <div class="reference-embed">
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DblJiNtocfQ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:0; box-shadow:none; margin:0; padding:0; width:100%;">
-                <a class="embed-fallback" href="https://www.instagram.com/p/DblJiNtocfQ/" target="_blank" rel="noopener">Ver post no Instagram</a>
-              </blockquote>
+              <iframe
+                class="instagram-frame is-post"
+                src="https://www.instagram.com/p/DblJiNtocfQ/embed/"
+                title="post de referência no Instagram"
+                loading="lazy"
+                allowtransparency="true"
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="reference-copy">
               <small>Post simples</small>
@@ -931,9 +957,14 @@
 
           <article class="reference-card">
             <div class="reference-embed">
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DS0j_F2kZ05/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:0; box-shadow:none; margin:0; padding:0; width:100%;">
-                <a class="embed-fallback" href="https://www.instagram.com/p/DS0j_F2kZ05/" target="_blank" rel="noopener">Ver Reel no Instagram</a>
-              </blockquote>
+              <iframe
+                class="instagram-frame is-reel"
+                src="https://www.instagram.com/p/DS0j_F2kZ05/embed/"
+                title="Reel de referência no Instagram"
+                loading="lazy"
+                allowtransparency="true"
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="reference-copy">
               <small>Reel</small>
@@ -978,7 +1009,5 @@
       <span>Última atualização: agosto de 2026</span>
     </div>
   </footer>
-
-  <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
