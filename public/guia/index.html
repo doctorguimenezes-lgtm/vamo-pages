@@ -50,11 +50,17 @@
     }
 
     .logo {
-      color: var(--orange);
-      font-size: 31px;
-      line-height: 1;
-      letter-spacing: -2px;
-      font-weight: 900;
+      display: inline-flex;
+      align-items: center;
+      line-height: 0;
+    }
+
+    .logo img {
+      display: block;
+      width: 112px;
+      height: auto;
+      max-height: 42px;
+      object-fit: contain;
     }
 
     .document-type {
@@ -626,7 +632,7 @@
 <body>
   <header class="document-header">
     <div class="page header-line">
-      <div class="logo" aria-label="Vamo!">vamo!</div>
+      <a class="logo" href="/" aria-label="Vamo! – página inicial"><img src="/logo-vamo.png" alt="Vamo!"></a>
       <div class="document-type">Guia para creators e afiliados</div>
     </div>
   </header>
